@@ -11,18 +11,16 @@ app.use(bodyParser.json());
 
 
 //importing routes
-const postRoute = require('./routes/home');
 const userRoute = require('./routes/user');
 const productRoute = require('./routes/product');
 
 
 // using routes
-app.use('/home', postRoute);
 app.use('/user', userRoute);
 app.use('/product', productRoute);
 
 app.get('/', (req, res) => {
-    res.send("this works innit");
+    res.send("server is live");
 });
 
 
